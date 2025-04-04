@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XL Studios</title>
+  <title>XL Studios - Elevate Your Brand</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center">
@@ -19,18 +20,57 @@
     </nav>
   </header>
 
-  <section class="text-center py-16 px-4 md:px-12">
-    <h2 class="text-4xl font-bold mb-4">Click. Connect. Convert.</h2>
-    <p class="text-lg mb-6">We help local Indian businesses grow with real marketing strategies — not just posts and promises.</p>
-    <div class="space-x-4">
-      <a href="services.html" class="bg-indigo-500 text-white px-6 py-3 rounded-xl">Explore Services</a>
-      <a href="schedule.html" class="bg-green-500 text-white px-6 py-3 rounded-xl">Schedule Now</a>
+  <!-- Hero Section -->
+  <section class="relative text-center py-20 px-4 md:px-12 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?digital,marketing,office');">
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg">
+      <h2 class="text-5xl font-bold text-white mb-4 opacity-0" id="hero-title">Digital Marketing That Delivers</h2>
+      <p class="text-lg text-white mb-6 opacity-0" id="hero-subtitle">Empowering local brands with strategy, creativity & results.</p>
+      <div class="space-x-4">
+        <a href="services.html" class="bg-indigo-500 text-white px-6 py-3 rounded-xl">Our Services</a>
+        <a href="schedule.html" class="bg-green-500 text-white px-6 py-3 rounded-xl">Schedule a Call</a>
+      </div>
     </div>
   </section>
 
+  <!-- Animated Illustration Section -->
+  <section class="py-16 px-4 md:px-12 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6">See the Impact</h2>
+      <p class="mb-6">We merge data, creativity, and technology to create marketing that matters. Drive traffic, capture leads, and convert like never before.</p>
+      <img src="https://assets-global.website-files.com/62276fe10145ff8b3a39c06e/641c0a087bd3e10e4aa0c3cb_Digital%20Marketing%20Services.svg" alt="Digital Marketing Animation" class="mx-auto w-full max-w-2xl animate-pulse">
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 px-4 md:px-12 text-center">
+    <h2 class="text-4xl font-bold mb-6">Why Choose XL Studios?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
+        <h3 class="text-xl font-bold mb-2">Results-Driven Marketing</h3>
+        <p>Our strategies focus on delivering measurable growth and ROI.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
+        <h3 class="text-xl font-bold mb-2">Data-Backed Strategies</h3>
+        <p>We use analytics and insights to refine and optimize campaigns.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
+        <h3 class="text-xl font-bold mb-2">Full-Service Digital Solutions</h3>
+        <p>From branding to social media, we cover everything under one roof.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="text-center py-6 text-sm text-gray-600 bg-white border-t">
-    © 2025 XL Studios. Built for local business growth.
+    © 2025 XL Studios. Elevating Brands, Driving Growth.
   </footer>
+
+  <script>
+    // GSAP Animations
+    gsap.to("#hero-title", { opacity: 1, y: -10, duration: 1 });
+    gsap.to("#hero-subtitle", { opacity: 1, y: -10, duration: 1.2 });
+    gsap.to(".feature-box", { opacity: 1, scale: 1, duration: 1, stagger: 0.3 });
+  </script>
 </body>
 </html>
 
