@@ -1,20 +1,66 @@
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - XL Studios</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-<body class="bg-white text-gray-900">
-  <header class="p-6 shadow-md flex justify-between items-center bg-indigo-600 text-white">
-    <h1 class="text-xl font-bold">XL Studios</h1>
-    <a href="index.html" class="hover:underline">Home</a>
+<body class="bg-gray-50 text-gray-900">
+  <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-600">XL Studios</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="text-indigo-600 hover:underline">Home</a>
+      <a href="services.html" class="text-indigo-600 hover:underline">Services</a>
+      <a href="schedule.html" class="text-indigo-600 hover:underline">Schedule Now</a>
+      <a href="about.html" class="text-indigo-600 hover:underline">About</a>
+      <a href="connect.html" class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Connect</a>
+    </nav>
   </header>
-  <main class="p-8">
-    <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-    <p>Here’s what we offer to help your business grow...</p>
-    <!-- Add your services breakdown here -->
-  </main>
+
+  <section class="text-center py-16 px-4 md:px-12">
+    <h2 class="text-4xl font-bold mb-4 opacity-0" id="title">Our Services</h2>
+    <p class="text-lg mb-6 opacity-0" id="subtitle">We offer expert digital marketing solutions to elevate your brand.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
+        <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
+        <p>Boost your brand’s reach with targeted campaigns on Facebook, Instagram, and LinkedIn.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
+        <h3 class="text-xl font-bold mb-2">SEO Optimization</h3>
+        <p>Improve search rankings and attract organic traffic with expert SEO strategies.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
+        <h3 class="text-xl font-bold mb-2">Pay-Per-Click Ads</h3>
+        <p>Maximize conversions with high-ROI Google Ads and paid social media campaigns.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
+        <h3 class="text-xl font-bold mb-2">Website Development</h3>
+        <p>Create stunning, high-performance websites optimized for conversions.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
+        <h3 class="text-xl font-bold mb-2">Branding & Graphics</h3>
+        <p>Build a strong visual identity with custom logos, designs, and brand guidelines.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
+        <h3 class="text-xl font-bold mb-2">Email Marketing</h3>
+        <p>Engage your audience with automated, high-converting email campaigns.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-sm text-gray-600 bg-white border-t">
+    © 2025 XL Studios. Elevating Your Brand’s Presence.
+  </footer>
+
+  <script>
+    // GSAP Animations
+    gsap.to("#title", { opacity: 1, y: -10, duration: 1 });
+    gsap.to("#subtitle", { opacity: 1, y: -10, duration: 1.2 });
+    gsap.to(".service-box", { opacity: 1, scale: 1, duration: 1, stagger: 0.3 });
+  </script>
 </body>
 </html>
