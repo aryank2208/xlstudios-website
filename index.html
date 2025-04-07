@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +6,23 @@
   <title>XL Studios - Elevate Your Brand</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    #hero-title {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    #hero-subtitle {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center">
+<body class="bg-beige text-gray-900" style="background-color: #f5f5dc;">
+  <!-- Navigation -->
+  <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center sticky top-0 z-50">
     <h1 class="text-2xl font-bold text-indigo-600">XL Studios</h1>
-    <nav class="space-x-4">
-      <a href="index.html" class="text-indigo-600 hover:underline">Home</a>
+    <nav class="space-x-4" aria-label="Main navigation">
+      <a href="index.html" aria-current="page" class="text-indigo-600 font-semibold hover:underline">Home</a>
       <a href="services.html" class="text-indigo-600 hover:underline">Services</a>
       <a href="schedule.html" class="text-indigo-600 hover:underline">Schedule Now</a>
       <a href="about.html" class="text-indigo-600 hover:underline">About</a>
@@ -21,46 +31,55 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative text-center py-20 px-4 md:px-12 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?digital,marketing,office');">
-    <div class="bg-black bg-opacity-60 p-10 rounded-lg">
-      <h2 class="text-5xl font-bold text-white mb-4 opacity-0" id="hero-title">Digital Marketing That Delivers</h2>
-      <p class="text-lg text-white mb-6 opacity-0" id="hero-subtitle">Empowering local brands with strategy, creativity & results.</p>
-      <div class="space-x-4">
-        <a href="services.html" class="bg-indigo-500 text-white px-6 py-3 rounded-xl">Our Services</a>
-        <a href="schedule.html" class="bg-green-500 text-white px-6 py-3 rounded-xl">Schedule a Call</a>
+  <main>
+    <section aria-label="Hero Section" class="relative text-center py-20 px-4 md:px-12 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?digital,marketing,office');">
+      <div class="bg-black/60 backdrop-blur-md p-10 rounded-lg max-w-3xl mx-auto">
+        <h2 class="text-5xl font-bold text-black mb-4" id="hero-title">Digital Marketing That Delivers</h2>
+        <p class="text-lg text-black mb-6" id="hero-subtitle">Empowering local brands with strategy, creativity & results. We are more than an agency—we’re your growth partners.</p>
+        <div class="space-x-4">
+          <a href="services.html" class="bg-indigo-500 text-white px-6 py-3 rounded-xl">Our Services</a>
+          <a href="schedule.html" class="bg-green-500 text-white px-6 py-3 rounded-xl">Schedule a Call</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Animated Illustration Section -->
-  <section class="py-16 px-4 md:px-12 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold mb-6">See the Impact</h2>
-      <p class="mb-6">We merge data, creativity, and technology to create marketing that matters. Drive traffic, capture leads, and convert like never before.</p>
-      <!-- Lottie Animation -->
-      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_pwohahvd.json" background="transparent" speed="1" style="width: 100%; max-width: 500px; margin: auto;" loop autoplay></lottie-player>
-      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    </div>
-  </section>
+    <!-- Company Overview -->
+    <section class="py-16 px-4 md:px-12 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold mb-4">About XL Studios</h2>
+        <p class="text-lg text-gray-700">At XL Studios, we blend strategy, storytelling, and smart technology to help small and mid-sized businesses punch above their weight in the digital arena. From brand building to high-conversion funnels, we offer everything you need under one umbrella to grow your influence and revenues. Our mission is to bring enterprise-level marketing power to everyday entrepreneurs.</p>
+      </div>
+    </section>
 
-  <!-- Why Choose Us -->
-  <section class="py-16 px-4 md:px-12 text-center">
-    <h2 class="text-4xl font-bold mb-6">Why Choose XL Studios?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
-        <h3 class="text-xl font-bold mb-2">Results-Driven Marketing</h3>
-        <p>Our strategies focus on delivering measurable growth and ROI.</p>
+    <!-- Lottie + Features -->
+    <section class="py-16 px-4 md:px-12 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6">See the Impact</h2>
+        <p class="mb-6">We merge data, creativity, and technology to create marketing that matters. Drive traffic, capture leads, and convert like never before.</p>
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_pwohahvd.json" background="transparent" speed="1" style="width: 100%; max-width: 500px; margin: auto;" loop autoplay></lottie-player>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
-        <h3 class="text-xl font-bold mb-2">Data-Backed Strategies</h3>
-        <p>We use analytics and insights to refine and optimize campaigns.</p>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 px-4 md:px-12 text-center">
+      <h2 class="text-4xl font-bold mb-6">Why Choose XL Studios?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
+          <h3 class="text-xl font-bold mb-2">Results-Driven Marketing</h3>
+          <p>Our strategies focus on delivering measurable growth and ROI.</p>
+        </div>
+        <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
+          <h3 class="text-xl font-bold mb-2">Data-Backed Strategies</h3>
+          <p>We use analytics and insights to refine and optimize campaigns.</p>
+        </div>
+        <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
+          <h3 class="text-xl font-bold mb-2">Full-Service Digital Solutions</h3>
+          <p>From branding to social media, we cover everything under one roof.</p>
+        </div>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 feature-box">
-        <h3 class="text-xl font-bold mb-2">Full-Service Digital Solutions</h3>
-        <p>From branding to social media, we cover everything under one roof.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="text-center py-6 text-sm text-gray-600 bg-white border-t">
@@ -69,11 +88,15 @@
 
   <script>
     // GSAP Animations
-    gsap.to("#hero-title", { opacity: 1, y: -10, duration: 1 });
-    gsap.to("#hero-subtitle", { opacity: 1, y: -10, duration: 1.2 });
-    gsap.to(".feature-box", { opacity: 1, scale: 1, duration: 1, stagger: 0.3 });
+    window.addEventListener('DOMContentLoaded', () => {
+      gsap.to("#hero-title", { opacity: 1, y: 0, duration: 1 });
+      gsap.to("#hero-subtitle", { opacity: 1, y: 0, duration: 1.2 });
+      gsap.to(".feature-box", { opacity: 1, scale: 1, duration: 1, stagger: 0.3 });
+    });
   </script>
 </body>
 </html>
+
+
 
 
