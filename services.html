@@ -1,4 +1,3 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +6,45 @@
   <title>Our Services - XL Studios</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .service-box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      background-color: #fffaf0;
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .service-details {
+      display: none;
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      font-style: italic;
+      color: #4B5563;
+    }
+    .service-box.active .service-details {
+      display: block;
+    }
+    .icon {
+      display: inline-block;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    h3 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    p {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+    }
+    li {
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-beige text-gray-900" style="background-color: #f5f5dc;">
   <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-indigo-600">XL Studios</h1>
     <nav class="space-x-4">
@@ -23,31 +59,73 @@
   <section class="text-center py-16 px-4 md:px-12">
     <h2 class="text-4xl font-bold mb-4 opacity-0" id="title">Our Services</h2>
     <p class="text-lg mb-6 opacity-0" id="subtitle">We offer expert digital marketing solutions to elevate your brand.</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
-        <h3 class="text-xl font-bold mb-2">Social Media Marketing</h3>
+
+    <div class="flex flex-col items-center space-y-8 mt-8">
+      <div class="p-6 shadow-lg rounded-lg transform scale-90 opacity-0 service-box w-full max-w-xl">
+        <h3 class="text-xl font-bold mb-2"><i class="fab fa-instagram icon"></i>Social Media Marketing</h3>
         <p>Boost your brand’s reach with targeted campaigns on Facebook, Instagram, and LinkedIn.</p>
+        <div class="service-details">
+          <ul class="list-disc list-inside text-left mt-2">
+            <li>Platform-specific strategy creation</li>
+            <li>Content calendar and post design</li>
+            <li>Performance analytics and optimization</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
-        <h3 class="text-xl font-bold mb-2">SEO Optimization</h3>
+      <div class="p-6 shadow-lg rounded-lg transform scale-90 opacity-0 service-box w-full max-w-xl">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-search icon"></i>SEO Optimization</h3>
         <p>Improve search rankings and attract organic traffic with expert SEO strategies.</p>
+        <div class="service-details">
+          <ul class="list-disc list-inside text-left mt-2">
+            <li>Keyword research and competitor analysis</li>
+            <li>On-page SEO and content optimization</li>
+            <li>Technical SEO and backlink building</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
-        <h3 class="text-xl font-bold mb-2">Pay-Per-Click Ads</h3>
+      <div class="p-6 shadow-lg rounded-lg transform scale-90 opacity-0 service-box w-full max-w-xl">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-bullseye icon"></i>Pay-Per-Click Ads</h3>
         <p>Maximize conversions with high-ROI Google Ads and paid social media campaigns.</p>
+        <div class="service-details">
+          <ul class="list-disc list-inside text-left mt-2">
+            <li>Campaign strategy and setup</li>
+            <li>Bid management and ad copywriting</li>
+            <li>Conversion tracking and reporting</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
-        <h3 class="text-xl font-bold mb-2">Website Development</h3>
+      <div class="p-6 shadow-lg rounded-lg transform scale-90 opacity-0 service-box w-full max-w-xl">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-code icon"></i>Website Development</h3>
         <p>Create stunning, high-performance websites optimized for conversions.</p>
+        <div class="service-details">
+          <ul class="list-disc list-inside text-left mt-2">
+            <li>Responsive and SEO-friendly design</li>
+            <li>Custom development and CMS integration</li>
+            <li>Performance and security enhancements</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
-        <h3 class="text-xl font-bold mb-2">Branding & Graphics</h3>
+      <div class="p-6 shadow-lg rounded-lg transform scale-90 opacity-0 service-box w-full max-w-xl">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-paint-brush icon"></i>Branding & Graphics</h3>
         <p>Build a strong visual identity with custom logos, designs, and brand guidelines.</p>
+        <div class="service-details">
+          <ul class="list-disc list-inside text-left mt-2">
+            <li>Logo design and typography</li>
+            <li>Color palette and brand kit</li>
+            <li>Marketing and packaging design</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-white shadow-lg rounded-lg transform scale-90 opacity-0 service-box">
-        <h3 class="text-xl font-bold mb-2">Email Marketing</h3>
+      <div class="p-6 shadow-lg rounded-lg transform scale-90 opacity-0 service-box w-full max-w-xl">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-envelope icon"></i>Email Marketing</h3>
         <p>Engage your audience with automated, high-converting email campaigns.</p>
+        <div class="service-details">
+          <ul class="list-disc list-inside text-left mt-2">
+            <li>Email list segmentation</li>
+            <li>Personalized templates and copy</li>
+            <li>Automation and analytics</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -57,10 +135,14 @@
   </footer>
 
   <script>
-    // GSAP Animations
     gsap.to("#title", { opacity: 1, y: -10, duration: 1 });
     gsap.to("#subtitle", { opacity: 1, y: -10, duration: 1.2 });
     gsap.to(".service-box", { opacity: 1, scale: 1, duration: 1, stagger: 0.3 });
+
+    document.querySelectorAll(".service-box").forEach(box => {
+      box.addEventListener("mouseenter", () => box.classList.add("active"));
+      box.addEventListener("mouseleave", () => box.classList.remove("active"));
+    });
   </script>
 </body>
 </html>
