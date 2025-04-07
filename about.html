@@ -7,8 +7,51 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #f5f5dc; /* Beige */
+    }
+    .popup {
+      display: none;
+      position: absolute;
+      z-index: 50;
+      background-color: #fefcf5;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 0.5rem);
+      white-space: normal;
+    }
+    .service-box:hover .popup {
+      display: block;
+      animation: fadeInUp 0.3s ease-in-out;
+    }
+    .service-box {
+      position: relative;
+      z-index: 40;
+      background-color: #fffaf0;
+      padding: 1.5rem;
+      border-left: 4px solid #4f46e5;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+      z-index: 60;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800">
+
   <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-indigo-600">XL Studios</h1>
     <nav class="space-x-4">
@@ -20,7 +63,7 @@
     </nav>
   </header>
 
-  <section class="py-20 px-4 md:px-12 bg-yellow-50">
+  <section class="py-20 px-4 md:px-12">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-4xl font-extrabold mb-6 uppercase">Who We Are</h2>
       <div class="flex justify-center mb-6">
@@ -28,58 +71,65 @@
       </div>
       <div class="bg-white shadow-lg p-6 rounded-lg opacity-0" id="about-text">
         <p class="text-lg">
-          At XL Studios, we are passionate digital innovators committed to helping businesses thrive in the online world. 
-          With a perfect blend of creativity, technology, and marketing intelligence, we craft digital solutions that resonate. 
-          Our mission is to take your business to the next level with tailor-made strategies, stunning visuals, and a results-driven mindset. 
-          We don’t just build websites or manage ads—we build brands that last. Let’s transform your vision into impactful reality.
+          We’re XL Studios — a powerhouse of creativity, tech-savvy brains, and unstoppable energy. Our team doesn’t just build digital experiences, we *elevate* them. From eye-grabbing visuals to results-driven strategies, every pixel and plan is tailored to put your brand on the map and in the minds of your audience. We don’t follow trends — we set them. Let’s turn your big ideas into legendary digital success stories.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="py-12 px-4 md:px-12 bg-white">
+  <section class="py-12 px-4 md:px-12">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-semibold text-center mb-12">Why XL Studios is Different</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-0">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Instant On-Call Support</h4>
-          <p>We prioritize your urgency and are always just a call away when you need us the most.</p>
+          <p>Always ready. Always reachable. Like your digital emergency button.</p>
+          <div class="popup">24/7 availability, dedicated account managers, immediate response on escalations.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Client Data Confidentiality</h4>
-          <p>Your data is sacred. We follow strict protocols to ensure full privacy and protection.</p>
+          <p>Your secrets are safe with us. Vault-level privacy on lock.</p>
+          <div class="popup">Encrypted communication, NDA compliance, GDPR readiness.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Custom Designs</h4>
-          <p>Each website we craft is unique and reflects your business’s core identity.</p>
+          <p>Cookie-cutters? Never heard of 'em. Your brand, your vibe, your story.</p>
+          <div class="popup">Tailored wireframes, brand-centric visuals, UX/UI consulting.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">SEO-Focused Approach</h4>
-          <p>Our strategies focus on ranking your business higher using top-performing keywords.</p>
+          <p>Rank hard, shine higher. Get seen where it matters most.</p>
+          <div class="popup">Keyword research, on-page optimization, technical audits.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Real-Time Analytics</h4>
-          <p>Get insightful, transparent data to track performance and ROI effectively.</p>
+          <p>Know your numbers. Own your growth. Track it live, tweak it smart.</p>
+          <div class="popup">Live dashboards, Google Analytics setup, campaign insights.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Emotion-Driven Design</h4>
-          <p>We design experiences that connect emotionally with your audience.</p>
+          <p>We don’t just build for clicks — we design for feelings and impact.</p>
+          <div class="popup">Color psychology, persuasive layout structures, storytelling UI.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Lightning Fast Communication</h4>
-          <p>We never leave you hanging—updates, feedback, and reports are shared promptly.</p>
+          <p>We're faster than your morning coffee kick — feedback loops that don’t sleep.</p>
+          <div class="popup">Slack/Telegram channels, weekly updates, 1-day turnaround replies.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Maintenance & Support</h4>
-          <p>We offer post-launch support so your digital presence never skips a beat.</p>
+          <p>We’ve got your back — even after launch. Always improving. Always supporting.</p>
+          <div class="popup">Bug fixes, uptime monitoring, monthly backups.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Market & Trend Awareness</h4>
-          <p>We keep you ahead of the curve with deep insights into evolving market behavior.</p>
+          <p>Stay ahead of the curve. We decode trends before they go mainstream.</p>
+          <div class="popup">Trend tracking, industry benchmarking, AI-powered insights.</div>
         </div>
-        <div class="bg-white border-l-4 border-indigo-600 p-6 shadow-md transition-transform transform hover:scale-105">
+        <div class="service-box">
           <h4 class="text-xl font-bold mb-2">Creative & Passionate Team</h4>
-          <p>A young and passionate team that works as if your brand is their own.</p>
+          <p>We treat your brand like our baby — fueled by passion and bold ideas.</p>
+          <div class="popup">Fresh perspectives, dynamic collaboration, brand empathy.</div>
         </div>
       </div>
     </div>
