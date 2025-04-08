@@ -1,0 +1,62 @@
+import React from "react";
+
+const clients = [
+  {
+    name: "CreativeHub Agency",
+    logo: "/clients/creativehub.png", // Add to public/clients folder
+    project: "Brand Identity Design",
+    review:
+      "Working with XLStudios was a game-changer. Their designs brought our vision to life!",
+    reviewer: "Ananya Sharma, CEO",
+  },
+  {
+    name: "TechNest",
+    logo: "/clients/technest.png",
+    project: "UI/UX for Mobile App",
+    review:
+      "Impressive UI/UX work! Smooth process, great team. Highly recommend XLStudios.",
+    reviewer: "Rohan Mehta, Product Head",
+  },
+  {
+    name: "QuickCart",
+    logo: "/clients/quickcart.png",
+    project: "Social Media Campaign",
+    review:
+      "Our engagement skyrocketed after working with XLStudios. They truly understand branding.",
+    reviewer: "Nikita Rao, Marketing Lead",
+  },
+];
+
+const ClientPage = () => {
+  return (
+    <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Clients</h2>
+        <p className="text-lg text-gray-600 mb-12">
+          Trusted by innovative startups and industry leaders.
+        </p>
+
+        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {clients.map((client, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 rounded-2xl shadow-md p-6 hover:shadow-xl transition"
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-16 mx-auto mb-4 object-contain"
+              />
+              <h3 className="text-xl font-semibold text-gray-800">{client.name}</h3>
+              <p className="text-sm text-gray-500 mb-2">{client.project}</p>
+              <p className="text-gray-700 italic mt-4">“{client.review}”</p>
+              <p className="mt-3 text-sm text-gray-600 font-medium">{client.reviewer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ClientPage;
