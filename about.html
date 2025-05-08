@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - XL Studios</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     body {
-      background-color: #f5f5dc; /* Beige */
+      background-color: #f5f5dc;
     }
+
     .popup {
-      display: none;
       position: absolute;
       z-index: 50;
       background-color: #fefcf5;
       padding: 1rem;
       border-radius: 0.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 300px;
       top: 100%;
       left: 50%;
-      transform: translate(-50%, 0.5rem);
+      transform: translate(-50%, 10px);
       white-space: normal;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
     }
+
     .service-box:hover .popup {
-      display: block;
-      animation: fadeInUp 0.3s ease-in-out;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
     }
+
     .service-box {
       position: relative;
       z-index: 40;
@@ -37,21 +44,18 @@
       padding: 1.5rem;
       border-left: 4px solid #4f46e5;
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
+
     .service-box:hover {
       transform: scale(1.05);
       z-index: 60;
     }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
-<body class="text-gray-800">
 
+<body class="text-gray-800">
   <header class="bg-white shadow-md py-6 px-4 md:px-12 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-indigo-600">XL Studios</h1>
     <nav class="space-x-4">
@@ -63,20 +67,29 @@
     </nav>
   </header>
 
+  <!-- About Section -->
   <section class="py-20 px-4 md:px-12">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-4xl font-extrabold mb-6 uppercase">Who We Are</h2>
       <div class="flex justify-center mb-6">
-        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        <lottie-player
+          src="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px;"
+          loop
+          autoplay
+        ></lottie-player>
       </div>
       <div class="bg-white shadow-lg p-6 rounded-lg opacity-0" id="about-text">
         <p class="text-lg">
-          We’re XL Studios — a powerhouse of creativity, tech-savvy brains, and unstoppable energy. Our team doesn’t just build digital experiences, we *elevate* them. From eye-grabbing visuals to results-driven strategies, every pixel and plan is tailored to put your brand on the map and in the minds of your audience. We don’t follow trends — we set them. Let’s turn your big ideas into legendary digital success stories.
+          We’re XL Studios — a powerhouse of creativity, tech-savvy brains, and unstoppable energy. Our team doesn’t just build digital experiences, we <strong>elevate</strong> them. From eye-grabbing visuals to results-driven strategies, every pixel and plan is tailored to put your brand on the map and in the minds of your audience. We don’t follow trends — we set them. Let’s turn your big ideas into legendary digital success stories.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- Why XL Studios Section -->
   <section class="py-12 px-4 md:px-12">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-semibold text-center mb-12">Why XL Studios is Different</h3>
@@ -144,3 +157,4 @@
   </script>
 </body>
 </html>
+
