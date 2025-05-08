@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover What You Need | Tailored Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                    <span class="font-semibold text-gray-900 text-xl">SolutionFinder</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-blue-600 font-medium">Home</a>
+                    <a href="#" class="hover:text-blue-600 transition">Services</a>
+                    <a href="#" class="hover:text-blue-600 transition">About</a>
+                    <a href="#" class="hover:text-blue-600 transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-gray-600 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 fade-in">Not Sure What You Need?</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90 fade-in">
+                Let us help you discover the perfect solution tailored just for you.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg">
+                    Get Started
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold transition duration-300">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Identification Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">What Are You Looking For?</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                Select the category that best describes your current needs or challenges.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-briefcase text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Business Solutions</h3>
+                    <p class="text-gray-600 mb-4">
+                        Improve efficiency, increase sales, or streamline operations for your business.
+                    </p>
+                    <button class="text-blue-600 font-medium hover:text-blue-800 transition">
+                        Explore Options <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 card-hover">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-laptop-code text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Tech & Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Need a website, app, or custom software solution? We've got you covered.
+                    </p>
+                    <button class="text-purple-600 font-medium hover:text-purple-800 transition">
+                        Explore Options <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 card-hover">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Marketing & Growth</h3>
+                    <p class="text-gray-600 mb-4">
+                        Boost your online presence, attract more customers, and grow your brand.
+                    </p>
+                    <button class="text-green-600 font-medium hover:text-green-800 transition">
+                        Explore Options <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md transition duration-300 card-hover">
+                    <div class="text-orange-600 mb-4">
+                        <i class="fas fa-question-circle text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Not Sure Yet</h3>
+                    <p class="text-gray-600 mb-4">
+                        Let's figure it out together with our personalized consultation.
+                    </p>
+                    <button class="text-orange-600 font-medium hover:text-orange-800 transition">
+                        Talk to Us <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guided Selection Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold mb-6">Still Uncertain? Take Our Guided Quiz</h2>
+                    <p class="text-gray-600 mb-6">
+                        Our interactive quiz will ask you a few simple questions to help identify exactly what you need.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Only takes 2 minutes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Personalized recommendations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>No commitment required</span>
+                        </li>
+                    </ul>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg">
+                        Start the Quiz <i class="fas fa-play-circle ml-2"></i>
+                    </button>
+                </div>
+                <div class="lg:w-1/2 bg-gray-100 rounded-xl p-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-question text-blue-600"></i>
+                            </div>
+                            <h3 class="font-bold">Question 1 of 5</h3>
+                        </div>
+                        <p class="text-lg mb-6">What's your primary goal right now?</p>
+                        <div class="space-y-3">
+                            <button class="w-full text-left bg-gray-100 hover:bg-gray-200 px-4 py-3 rounded-lg transition">
+                                Grow my business
+                            </button>
+                            <button class="w-full text-left bg-gray-100 hover:bg-gray-200 px-4 py-3 rounded-lg transition">
+                                Solve a technical problem
+                            </button>
+                            <button class="w-full text-left bg-gray-100 hover:bg-gray-200 px-4 py-3 rounded-lg transition">
+                                Improve my online presence
+                            </button>
+                            <button class="w-full text-left bg-gray-100 hover:bg-gray-200 px-4 py-3 rounded-lg transition">
+                                I'm not sure yet
+                            </button>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Sample question from our quiz</span>
+                            <button class="text-blue-600 font-medium">
+                                Next <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Others Found Their Perfect Solution</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                Hear from customers who discovered exactly what they needed with our help.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Small Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "I wasn't sure what kind of website I needed. The quiz helped narrow down options I didn't even know existed!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Startup Founder</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The consultation helped me realize I needed a completely different solution than I originally thought."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">David Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Marketing Director</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "The category breakdown made it so easy to identify exactly which services would help our team the most."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Discover Your Perfect Solution?</h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Whether you know exactly what you need or are completely unsure, we can help.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg">
+                    Take the Quiz
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full font-semibold transition duration-300">
+                    Talk to an Expert
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-lightbulb text-blue-400 text-2xl"></i>
+                        <span class="font-semibold text-xl">SolutionFinder</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Helping you discover exactly what you need to succeed.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Quiz</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                            <span class="text-gray-400">hello@solutionfinder.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-gray-400 mr-2"></i>
+                            <span class="text-gray-400">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                            <span class="text-gray-400">123 Solution St, Tech City</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 SolutionFinder. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+            
+            // Quiz navigation simulation
+            const quizButtons = document.querySelectorAll('.bg-gray-100.hover\\:bg-gray-200');
+            quizButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove all active states
+                    quizButtons.forEach(btn => {
+                        btn.classList.remove('bg-blue-100', 'border-blue-500', 'border');
+                        btn.classList.add('bg-gray-100');
+                    });
+                    
+                    // Add active state to clicked button
+                    this.classList.remove('bg-gray-100');
+                    this.classList.add('bg-blue-100', 'border-blue-500', 'border');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
